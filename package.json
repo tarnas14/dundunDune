@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "tape-watch -c -r babel-register ./src/**/*spec.js -o '| faucet'"
+    "test": "tape-watch -c -r babel-register -R tape-promise ./tests/**/*.spec.js -o '| tap-spec --colors'"
   },
   "author": "tarnas14",
   "license": "ISC",
@@ -14,11 +14,12 @@
     "babel-preset-stage-2": "^6.24.1",
     "babel-register": "^6.24.1",
     "eslint": "^4.3.0",
-    "faucet": "0.0.1",
+    "tap-spec": "^4.1.1",
     "tape": "^4.7.0",
+    "tape-promise": "^2.0.1",
     "tape-watch": "^2.3.0"
   },
   "dependencies": {
-    "redux": "^3.7.2"
+    "rxjs": "^5.4.2"
   }
 }
